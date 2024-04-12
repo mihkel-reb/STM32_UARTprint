@@ -17,7 +17,7 @@ void initClocks(void) {
 }
 
 
-void configurePin(void) {
+void configPin(void) {
 	//clear bits for PD8
 	GPIOD->MODER &= ~(1 << 16);
 	GPIOD->MODER &= ~(1 << 17);
@@ -32,7 +32,7 @@ void configurePin(void) {
 	GPIOD->AFR[1] &= ~(1 << 3);
 }
 
-void configureUART(void) {
+void configUART(void) {
 
 	/*****Configure CR1 Register*****/
 
@@ -125,7 +125,7 @@ void configureUART(void) {
 
 }
 
-void UARTtransmit(const char *data) {
+void UARTprint(const char *data) {
 
 	while (*data) {
 
@@ -140,8 +140,8 @@ void UARTtransmit(const char *data) {
 
 void initUART(void) {
 	initClocks();
-	configurePin();
-	configureUART();
+	configPin();
+	configUART();
 }
 
 int main(void) {
@@ -150,7 +150,7 @@ int main(void) {
 
 	while (1) {
 
-		UARTtransmit("Hello World");
+		UARTprint("Hello World");
 		delay(100);
 
 	}
