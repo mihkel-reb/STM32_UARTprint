@@ -20,4 +20,4 @@ int main(void) {
 }
 ```
 ## Dependencies
-* CMSIS & HAL drivers for register macros
+* CMSIS for register definitions
