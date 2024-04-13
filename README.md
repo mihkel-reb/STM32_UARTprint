@@ -4,7 +4,7 @@ Allows for printing in serial consoles, similar to Arduino's Serial.println(). E
 ## Usage
 * Include "UARTprint.h" in your main.c
 * Use UARTprint() to print 
-* View output on any serial console, such as Putty, on the STlink COM Port
+* View output on any serial console, such as Putty, on the STLink COM Port
 ## Demo
 ```c
 #include "UARTprint.h"
@@ -20,4 +20,4 @@ int main(void) {
 }
 ```
 ## Dependencies
-* Relevant "stm32xxxx.h" file for your microcontroller
+* Relevant "stm32xxxx.h" file for your microcontroller (stm32f767xx.h for the NUCLEO-STM32F767ZI dev board)
