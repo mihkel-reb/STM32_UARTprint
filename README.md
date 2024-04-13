@@ -20,4 +20,4 @@ int main(void) {
 }
 ```
 ## Dependencies
-* Relevant "stm32xxxx.h" file for your microcontroller (stm32f767xx.h for the NUCLEO-STM32F767ZI dev board)
+* CMSIS
