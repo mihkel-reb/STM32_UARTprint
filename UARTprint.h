@@ -127,14 +127,13 @@ void configUART(void) {
 
 }
 
-void initUART(void) {
+void UARTprintInit(void) {
 	initClocks();
 	configPin();
 	configUART();
 }
 
 void UARTprint(const char *data) {
-	initUART();
 
 	while (*data) {
 
