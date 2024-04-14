@@ -3,6 +3,7 @@ Simple bare-metal UART based print functionality for the NUCLEO-STM32F767ZI deve
 Allows for printing in serial consoles, similar to Arduino's Serial.println().
 ## Usage
 * Add UARTprint.h to your project and include "UARTprint.h" in your main.c
+* initialize UARTprint using UARTprintInit()
 * Use UARTprint() to print 
 * View output on any serial console, such as Putty, on the STLink COM Port
 ## Demo
@@ -10,6 +11,8 @@ Allows for printing in serial consoles, similar to Arduino's Serial.println().
 #include "UARTprint.h"
 
 int main(void) {
+
+	UARTprintInit();
 
 	UARTprint("Hello World!");
 
